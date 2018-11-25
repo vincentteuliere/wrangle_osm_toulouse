@@ -8,7 +8,7 @@ Report and SQL queries are gathered in report.ipynb (.html version is also avail
 ## constants.py
 This file contains all constants of the project. Only following three ones should be modified:
 - `ROOT_SOURCE_FOLDER`: location of inputs data files (OSM + SQL schema)
-- `OSMFILE`: name of OSM in ROOT_SOURCE_FOLDER: 
+- `OSMFILE`: name of OSM in ROOT_SOURCE_FOLDER. By default, OSM file is `map_Roseraie_Toulouse_FR` located in `./data/`
 - `ROOT_OUTPUT_FOLDER`: destination folder for generated files: CSV files + SQL .db
 
 SQL databse FILE is generated in `ROOT_OUTPUT_FOLDER` and named `<OSMFILE>.db` based on `SQL_SCHEMA`  and list of CSV files:
@@ -38,7 +38,9 @@ This script generates SQL database based on SQL_SCHEMA and list of CSV files def
 Jupyter script containing the main report of the project and gathering all SQL queries. This script doesn't generate any file. To generate SQL database, you need to execute `data.py` and `create_sql_db.py` first. This report is consistent with the full database (e.g whole Toulouse OSM file) but the script can be executed into a reduced one. 
 
 ## Report.html
-Html version of Juputer script execution.
+html output of Jupyter script applied on whole Toulouse OSM file.
 
-
-
+## ./data/
+This folder contains:
+- a reduced OSM map of Toulouse: map_Roseraie_Toulouse_FR
+- SQL schema used by create_sql_db.py: data_wrangling_schema.sql
